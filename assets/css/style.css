@@ -38,26 +38,28 @@ header {
   padding: 8px 15px;
   margin: 0;
   color: #2F2E41;
+  background-color: #EDA0AB;
 }
 .container1 p {
   font-size: 20px;
+}
+.container1 img {
+  width: 100%;
 }
 .container1 button {
   border: 0;
   border-radius: 5px;
   padding: 8px 15px;
-  background-color: black;
-  color: black;
+  background-color: #Df3F1D;
+  color: #FFF8E0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .container1 button:hover {
   background-color: #6C63FF;
 }
-.container1 img {
-  width: 100%;
-}
 
 .box1 {
-  background-color: #EDA0AB;
   border-radius: 5px;
   padding: 8px 15px;
   margin: 0;
@@ -73,16 +75,6 @@ header {
 .box1 p {
   font-size: 20px;
 }
-.box1 button {
-  border: 0;
-  border-radius: 5px;
-  padding: 8px 15px;
-  background-color: #Df3F1D;
-  color: #FFF8E0;
-}
-.box1 button:hover {
-  background-color: #6C63FF;
-}
 .box1 img.flag {
   max-width: 300px;
 }
@@ -90,6 +82,8 @@ header {
 .container-3col {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #EDA0AB;
 }
 .container-3col .box2 {
   width: calc(33% - 20px);
@@ -97,8 +91,44 @@ header {
   flex-direction: column;
   justify-content: space-between;
 }
+.container-3col .box2 div:nth-child(2) {
+  text-align: center;
+}
 .container-3col .box2 img {
   width: 100%;
+  border-radius: 15px;
+}
+.container-3col .box2 button {
+  border: 0;
+  border-radius: 5px;
+  padding: 8px 15px;
+  background-color: #Df3F1D;
+  color: #FFF8E0;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container-3col .box2 button:hover {
+  background-color: #6C63FF;
+}
+
+.main-title {
+  margin: 10px;
+  text-align: center;
+}
+
+.box3 {
+  text-align: center;
+  width: 50%;
+}
+
+.row {
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0;
+}
+
+.column {
+  width: calc(25% - 20px);
 }
 
 footer {
@@ -114,6 +144,12 @@ footer img.logo {
   max-width: 80%;
 }
 
+@media screen and (max-width: 950px) {
+  .column {
+    width: calc(50% - 20px);
+    margin-bottom: 15px;
+  }
+}
 @media screen and (max-width: 768px) {
   .container1 {
     flex-direction: column-reverse;
@@ -123,5 +159,22 @@ footer img.logo {
   }
   .box1 img {
     max-width: 450px;
+  }
+  .box3 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container-3col .box2 {
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+  }
+  .container-3col .box2 img {
+    max-width: 450px;
+  }
+  .column {
+    width: calc(100% - 30px);
+    margin-bottom: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
