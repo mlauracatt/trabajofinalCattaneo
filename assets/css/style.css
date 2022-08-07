@@ -31,6 +31,9 @@ header {
   margin: 0;
   text-align: center;
 }
+header a {
+  margin: 0 20px;
+}
 
 .container1 {
   display: flex;
@@ -62,7 +65,7 @@ header {
 
 .box1 {
   border-radius: 5px;
-  padding: 8px 15px;
+  padding: 15px 15px;
   margin: 0;
   width: 50%;
   display: flex;
@@ -168,6 +171,9 @@ footer img.logo {
   }
 }
 @media screen and (max-width: 600px) {
+  header a {
+    margin: 0 5px;
+  }
   .container-3col .box2 {
     width: 100%;
     margin: 10px;
