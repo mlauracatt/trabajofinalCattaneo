@@ -1,0 +1,138 @@
+$colorPrincipal:#Df3F1D;
+$colorSecundario:#EDA0AB;
+$colorTerciario:#FFF8E0;
+$colorHover: #6C63FF;
+$tamanioTexto:20px;
+$colorBotones: black;
+$tamanioTituloh5: 20px;
+
+@mixin bloqueFlexEncolumnadoCentrado(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar{
+    margin: 0;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: end;
+        padding: 10px;
+        margin: 10px;
+        li{
+            padding: 10px;
+            a{
+                text-decoration: none;
+                color: #FFF8E0;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                opacity: .80;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+header {
+    @include bloqueFlexEncolumnadoCentrado();
+    background-color: #75B2B7;
+    margin: 0;
+    text-align: center;
+}
+
+.container1{
+    display: flex;
+    justify-content: space-between;
+    background-color: $colorSecundario;
+    padding: 8px 15px;
+    margin: 0;
+    color: #2F2E41;
+    p{
+      font-size: $tamanioTexto;
+    }
+    button{
+        border:0;
+        border-radius: 5px;
+        padding: 8px 15px;
+        background-color: $colorBotones;
+        color: black;
+        &:hover{
+            background-color: $colorHover;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+.box1{
+    background-color: $colorSecundario;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin: 0;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h5{
+        font-size: $tamanioTituloh5;
+    }
+    p{
+        font-size: $tamanioTexto;
+    }
+    button{
+        border: 0;
+        border-radius: 5px;
+        padding: 8px 15px;
+        background-color: #Df3F1D;
+        color: #FFF8E0;
+        &:hover{
+            background-color: #6C63FF;;
+        }
+    }
+    img.flag {
+        max-width: 300px;
+    }
+}
+.container-3col{
+    display: flex;
+    justify-content: space-evenly;
+    
+    .box2{
+        width: calc(33% - 20px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+footer {
+    @include bloqueFlexEncolumnadoCentrado();
+    margin: 10px;
+    p {
+        text-align: center;
+    }
+    img.logo {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container1 {
+        flex-direction: column-reverse;
+    }
+    .box1 {
+        width: 100%;
+        img {
+            max-width: 450px;
+        }
+    }
+
+}
